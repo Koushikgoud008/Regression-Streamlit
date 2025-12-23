@@ -36,7 +36,7 @@ df = load_data()
 
 # Dataset Preview
 
-st.markdown("""<div class ="card">""", unsafe_allow_html = True)
+# st.markdown("""<div class ="card">""", unsafe_allow_html = True)
 st.subheader("Dataset Preview")
 st.dataframe(df.head())
 st.markdown("""</div>""", unsafe_allow_html =True)
@@ -67,7 +67,7 @@ adj_r2 = 1 - (1-r2) * (len(y_test) -1) / (len(y_test) - 2)
 
 # visulization
 
-st.markdown('<div class ="card"', unsafe_allow_html =True )
+# st.markdown('<div class ="card"', unsafe_allow_html =True )
 st.subheader("Total bill vs Tip")
 fig, ax = plt.subplots()
 ax.scatter(df["total_bill"], df["tip"], alpha=0.6)
@@ -79,7 +79,7 @@ st.markdown('</div>',unsafe_allow_html=True)
 
 #performance metrics
 
-st.markdown('<div class ="card">',unsafe_allow_html=True)
+# st.markdown('<div class ="card">',unsafe_allow_html=True)
 st.subheader("MODEL PERFORMANCE")
 c1,c2 = st.columns(2)
 c1.metric("MAE",f"{mae:.2f}")
@@ -92,7 +92,7 @@ st.markdown('</div>',unsafe_allow_html=True)
 
 #prediction
 
-st.markdown('<div class = "card">', unsafe_allow_html =True)
+# st.markdown('<div class = "card">', unsafe_allow_html =True)
 st.subheader("predict Tip Amount")
 
 bill = st.slider("Total Bill", float(df.total_bill.min()), float(df.total_bill.max()), 30.0)
